@@ -9,7 +9,7 @@ const API_KEY = '43803068-e4e7e851cef47a5cf0e066a7d';
     image_type: "photo",
     orientation: "horizontal",
     safesearch: true,
-    per_page: 5,
+    per_page: 6,
     q: queryString,
   });
 

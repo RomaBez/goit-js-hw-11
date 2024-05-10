@@ -23,7 +23,7 @@
   -webkit-text-size-adjust: 100%;
 }
 
-.search {
+.search-form {
   display: flex;
   justify-content: center;
   margin-top: 36px;
@@ -58,4 +58,18 @@ button {
 
 .image-info {
   display: flex;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  list-style: none;
+  max-width: 100%;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }

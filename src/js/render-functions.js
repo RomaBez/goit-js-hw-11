@@ -1,22 +1,22 @@
 export const galleryMarkup = images => {
-    return images
-        .map((image) => {
-    `<li class="gallery-item">
-      <a class="gallery-link" href="${image.largeImageURL}">
+  return images
+    .map(
+      ({ largeImageURL, webformatURL, tags, likes, views, comments, downloads }) =>
+        `<li class="gallery-item">
+      <a class="gallery-link" href="${largeImageURL}">
         <img
           class="gallery-image"
-          src="${image.webformatURL}"
-          alt="${image.tags}"
+          src="${webformatURL}"
+          alt="${tags}"
         />
       </a>
       <div class="image-info">
-        <span class="info-item">Likes: ${image.likes}</span>
-        <span class="info-item">Views: ${image.views}</span>
-        <span class="info-item">Comments: ${image.comments}</span>
-        <span class="info-item">Downloads: ${image.downloads}</span>
+        <span class="info-item">Likes: ${likes}</span>
+        <span class="info-item">Views: ${views}</span>
+        <span class="info-item">Comments: ${comments}</span>
+        <span class="info-item">Downloads: ${downloads}</span>
       </div>
-    </li>`;
-  }).join('');
-}
+    </li>`)
+    .join('');
+};
 
-gallery.insertAdjacentHTML('beforeend', galleryMarkup);
